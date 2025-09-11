@@ -70,3 +70,5 @@ def estimate_azimuth(mics: Dict[str, Mic], cfg: ArrayConfig, obs: Observation) -
     quality = 0.0 if w_sum<=1e-9 else max(0.0, min(1.0, r / w_sum))
 
     return Solution(azimuth_deg=az_mean, quality=quality, used_mics=list(dict.fromkeys(used)))
+
+
